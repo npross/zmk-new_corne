@@ -58,15 +58,15 @@
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |               ↓    |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | SHIFT |  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |                ↓    |  H  |  J   |  K  |  L  |  ;  |  '   | 
+            // | SHIFT|  Z  |  X  |  C  |  V  |  B  |                ←    |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | ALT | LWR | SPC |                →    | ENT | RSE  | GUI |
             //                                                      enter
 
             bindings = <
 &kp TAB    &kp Q  &kp W      &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL       &kp A  &kp S      &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td0  &kp Z  &kp X      &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp LCTRL  &kp A  &kp S      &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td0       &kp Z  &kp X      &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                   &kp SPACE  &kp LALT  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &kp LGUI
                                                              &kp ENTER
             >;
@@ -97,23 +97,23 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "NAV FN";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  | HOME|  UP | END |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  | LFT | DWN | RGT |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  | PGUP|  {  | PGDN| "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp HOME   &kp UP     &kp END   &kp RPAR  &kp BSPC
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp LEFT   &kp DOWN   &kp RIGHT &kp BSLH  &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PG_UP  &kp LBRC   &kp PG_DN &kp PIPE  &kp TILDE
                       &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
                                                                        &mkp LCLK
             >;
 
-            label = "SYMBOL";
+            label = "NAV FN";
             sensor-bindings = <&scroll_encoder>;
         };
 
