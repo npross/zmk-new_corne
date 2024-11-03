@@ -80,16 +80,16 @@
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            // | CTRL |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  |   |
+            // | SHFT |  =  |  -  |  +  |  {  |  [  |   |  ]  |  }  |  ~  |  _  |  \  |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                         &kp C_MUTE      &trans        &trans        &trans             &mmv MOVE_RIGHT  &kp INS          &kp DEL          &trans
-                                                                                        &mkp LCLK
+&trans  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5      &trans  &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp BSPC
+&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT   &trans  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR   &kp RPAR  &kp PIPE
+&trans  &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &mmv LBKT   &trans  &kp RBKT   &kp RBRC  &kp TILDE  &kp UNDER  &kp BSLH  &trans
+                         &kp C_MUTE   &trans    &trans    &trans  &trans     &trans          &trans          &trans
+                                                                  &trans
             >;
 
             label = "NUMBER";
@@ -97,34 +97,34 @@
         };
 
         raise_layer {
-            display-name = "NAV FN";
+            display-name = "FN  NAV";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  | HOME|  UP | END |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  | LFT | DWN | RGT |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  | PGUP|  {  | PGDN| "|" |  ~   |
+            // |  TAB |  F1 |  F2 |  F3 |  F4 |  F5 |   |  ^  | HOME|  UP | END |  )  | BKSP |
+            // | CTRL |  F6 |  F7 |  F8 |  F9 | F10 |   |  -  | LFT | DWN | RGT |  \  |  `   |
+            // | SHFT | F11 | F12 |     |     |     |   |  _  | PGUP|  {  | PGDN| "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp HOME   &kp UP     &kp END   &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp LEFT   &kp DOWN   &kp RIGHT &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PG_UP  &kp LBRC   &kp PG_DN &kp PIPE  &kp TILDE
+&trans  &kp F1    &kp F2     &kp F3   &kp F4   &kp F5    &mmv MOVE_UP     &kp CARET  &kp HOME   &kp UP     &kp END   &kp RPAR  &kp BSPC
+&trans  &kp F6    &kp F7     &kp F8   &kp F9   &kp F10   &mmv MOVE_DOWN   &kp MINUS  &kp LEFT   &kp DOWN   &kp RIGHT &kp BSLH  &kp GRAVE
+&trans  &kp F11   &kp F12    &none    &none    &none     &mmv MOVE_LEFT   &kp UNDER  &kp PG_UP  &kp LBRC   &kp PG_DN &kp PIPE  &kp TILDE
                       &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
                                                                        &mkp LCLK
             >;
 
-            label = "NAV FN";
+            label = "FN  NAV";
             sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
-            display-name = "Fn";
+            display-name = "Util";
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5    &mmv MOVE_LEFT   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                    &kp C_MUTE  &trans       &trans     &trans      &mmv MOVE_RIGHT  &trans       &trans     &trans
-                                                                    &mkp LCLK
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &mmv MOVE_UP     &trans       trans      &trans       &trans      &trans           &kp F11
+&bt BT_CLR_ALL &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4  &mmv MOVE_DOWN   &trans       &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&bootloader    &sys_reset    &out OUT_USB  &out OUT_BLE  &trans        &trans         &mmv MOVE_LEFT   &trans       &trans     &trans       &trans      &kp SCROLLLOCK   &kp PAUSE_BREAK
+                             &kp C_MUTE    &trans        &trans        &trans         &mmv MOVE_RIGHT  &trans       &trans     &trans
+                                                                                      &mkp LCLK
             >;
 
             label = "FN";
