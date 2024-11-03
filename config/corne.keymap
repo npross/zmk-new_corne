@@ -120,11 +120,11 @@
         layer_3 {
             display-name = "Util";
             bindings = <
-&bt BT_CLR     &kp F1      &kp F2     &kp F3   &kp F4   &out OUT_USB     &mmv MOVE_UP     &out OUT_BLE      &kp HOME   &kp UP     &kp END   &kp RPAR  &kp BSPC
-&bt BT_CLR_ALL &kp F6      &kp F7     &kp F8   &kp F9   &bt BT_NXT       &mmv MOVE_DOWN   &bt BT_PRV        &kp LEFT   &kp DOWN   &kp RIGHT &kp BSLH  &kp GRAVE
-&sys_reset     &bootloader &kp F12    &none    &none    &ext_power EP_ON &mmv MOVE_LEFT   &ext_power EP_OFF &kp PG_UP  &kp LBRC   &kp PG_DN &bootloader  &sys_reset
-                      &trans        &trans     &trans     &kp SPACE      &mmv MOVE_RIGHT  &kp RET           &trans     &trans
-                                                                         &mkp LCLK
+&bt BT_CLR     &kp F1      &kp F2     &kp F3   &kp F4   &out OUT_USB &mmv MOVE_UP     &out OUT_BLE &kp HOME   &kp UP     &kp END   &kp RPAR  &kp BSPC
+&bt BT_CLR_ALL &kp F6      &kp F7     &kp F8   &kp F9   &bt BT_NXT   &mmv MOVE_DOWN   &bt BT_PRV   &kp LEFT   &kp DOWN   &kp RIGHT &kp BSLH  &kp GRAVE
+&sys_reset     &bootloader &kp F12    &none    &none    &none        &mmv MOVE_LEFT   &kp UNDER    &kp PG_UP  &kp LBRC   &kp PG_DN &bootloader  &sys_reset
+                      &trans        &trans     &trans     &kp SPACE  &mmv MOVE_RIGHT  &kp RET      &trans     &trans
+                                                                       &mkp LCLK
             >;
 
             label = "Util";
