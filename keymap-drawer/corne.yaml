@@ -153,9 +153,9 @@ layers:
   - F2
   - F3
   - F4
-  - F5
+  - OUT USB
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - ^
+  - OUT BLE
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -179,9 +179,9 @@ layers:
   - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - EP ON
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - _
+  - EP OFF
   - PG UP
   - '{'
   - PG DN
