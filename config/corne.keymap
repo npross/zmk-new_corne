@@ -120,11 +120,11 @@
         layer_3 {
             display-name = "Util";
             bindings = <
-&bt BT_CLR     &none  &none  &none  &none  &none   &mmv MOVE_UP     &trans       trans      &trans       &trans      &trans           &kp F11
-&bt BT_CLR_ALL &none &none  &none  &none  &none   &mmv MOVE_DOWN   &trans       &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&bootloader    &sys_reset    &out OUT_USB  &out OUT_BLE  &trans        &trans         &mmv MOVE_LEFT   &trans       &trans     &trans       &trans      &kp SCROLLLOCK   &kp PAUSE_BREAK
-                             &kp C_MUTE    &trans        &trans        &trans         &mmv MOVE_RIGHT  &trans       &trans     &trans
-                                                                                      &mkp LCLK
+&trans  &kp F1    &kp F2     &kp F3   &kp F4   &kp F5    &mmv MOVE_UP     &kp CARET  &kp HOME   &kp UP     &kp END   &kp RPAR  &kp BSPC
+&trans  &kp F6    &kp F7     &kp F8   &kp F9   &kp F10   &mmv MOVE_DOWN   &kp MINUS  &kp LEFT   &kp DOWN   &kp RIGHT &kp BSLH  &kp GRAVE
+&trans  &kp F11   &kp F12    &none    &none    &none     &mmv MOVE_LEFT   &kp UNDER  &kp PG_UP  &kp LBRC   &kp PG_DN &kp PIPE  &kp TILDE
+                      &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
+                                                                       &mkp LCLK
             >;
 
             label = "FN";
